@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* MEDIA QUERY MANAGER */
+
+/* 0 - 600px: Phone-xs */
+@media (max-width: 20em) {
+  /* content */
+}
+
+/* 0 - 600px: Phone */
+@media (max-width: 37.5em) {
+  /* content */
+}
+
+/* 768px: Table small */
+@media (max-width: 48em) {
+  /* content */
+}
+
+/* 900px: Table Portrait */
+@media (max-width: 56.25em) {
+  /* content */
+}
+
+/* 1200px: Table Landscape */
+@media (max-width: 75em) {
+  /* content */
+}
+
+/* 1800px +: Big Desktop */
+@media (min-width: 112.5em) {
+  /* content */
+}
+
+/* Border White Mixin */
+@mixin section-borders {
+  border: 1.5rem solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* Support Color for IE11 Mixin */
+@mixin supportColorForIE11 {
+  color: $secondary-color;
+  -webkit-text-fill-color: $secondary-color;
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background-image: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+/* Support IE11 Mixin */
+@mixin supportIE11 {
+  @media screen and (-ms-high-contrast: active),
+    screen and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
